@@ -181,13 +181,13 @@ namespace TelegaBot
             {
                 case StateComad.New:
                     {
-                       /* if (_persons[id].Role != RolePerson.Guest) 
+                        if (_persons[id].Role != RolePerson.Guest) 
                         {
                             await client.SendTextMessageAsync(chatId: update.Message!.Chat.Id,
                             text: $"Ты уже зарегистрирован");
                             _persons[id].cmd = new  Comand("");
                             return;
-                        }*/
+                        }
                         _persons[id].SetStateComad(StateComad.Wait);
                         await client.SendTextMessageAsync(chatId: update.Message!.Chat.Id,
                             text: $" Рад, что ты решил зарегистривроваться, твоя заявка ожидает подтверждение администратора");
